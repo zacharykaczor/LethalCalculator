@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lethal Accountant</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <header>
+        <span class="input">
+            <label for="credits">Credits</label>
+            <input type="text" id="credits" value="0">
+        </span>
+    
+        <span class="input">
+            <label for="quota">Quota</label>
+            <input type="text" id="quota" value="130">
+        </span>
+    </header>
+
+    <main>
+        <table id="store">
+            <caption>Store</caption>
+    
+            <tr>
+                <th>Name</th>
+                <th>Discount</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </table>
+
+        <table id="cart">
+            <caption>Cart</caption>
+
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Amount</th>
+                <th>Total</th>
+                <th>Actions</th>
+            </tr>
+
+        </table>
+    </main>
+
+    <table id="results">
+        <caption>Results</caption>
+
+        <tr>
+            <th>Cart Total</th>
+            <th>Sell Amount</th>
+            <th>Overtime</th>
+        </tr>
+
+        <tr>
+            <td id="total">0</td>
+            <td id="sellAmount">130</td>
+            <td id="overtime">0</td>
+        </tr>
+    </table>
+
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
