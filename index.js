@@ -11,7 +11,7 @@ const overtimeElement = document.querySelector("#overtime");
 function calculateSellAmount(current, desired, quota) {
     desired -= current
  
-    let overtimeNeeded = Math.max(0, desired - current - quota - 75);
+    let overtimeNeeded = Math.max(0, desired - quota - 75);
     let creditsForOvertime = overtimeNeeded / 1.2;
 
     return Math.ceil(desired - overtimeNeeded + creditsForOvertime);

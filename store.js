@@ -67,6 +67,16 @@ const store = [
         discountable: true
     },
     {
+        name: "Weed killer",
+        price: 25,
+        discountable: true
+    },
+    {
+        name: "Cruiser",
+        price: 400,
+        discountable: true
+    },
+    {
         name: "Loud horn",
         price: 100,
         discountable: false
