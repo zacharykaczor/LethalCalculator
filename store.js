@@ -52,6 +52,11 @@ const store = [
         discountable: true
     },
     {
+        name: "v56+ Jetpack",
+        price: 900,
+        discountable: true
+    },
+    {
         name: "Extension ladder",
         price: 60,
         discountable: true
