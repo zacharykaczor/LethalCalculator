@@ -21,7 +21,7 @@ function calculateTotal() {
     let total = 0;
 
     for (let item of store) {
-        let discountedPrice = Math.floor(item.price * (1 - item.discount));
+        let discountedPrice = Math.floor(item.price * (100 - item.discount) / 100);
         total += item.amount * discountedPrice;
     }
 
@@ -42,7 +42,7 @@ function updateResults() {
 }
 
 function updateItem(item) {
-    let discountedPrice = Math.floor(item.price * (1 - item.discount));
+    let discountedPrice = Math.floor(item.price * (100 - item.discount) / 100);
 
     item.storeRow.querySelector(".name").innerHTML = item.name;
     item.storeRow.querySelector(".price").innerHTML = discountedPrice;
@@ -80,14 +80,14 @@ function createRows() {
         <td>
             <select class="discounts">
                 <option value="0">0%</option>
-                <option value="0.1">10%</option>
-                <option value="0.2">20%</option>
-                <option value="0.3">30%</option>
-                <option value="0.4">40%</option>
-                <option value="0.5">50%</option>
-                <option value="0.6">60%</option>
-                <option value="0.7">70%</option>
-                <option value="0.8">80%</option>
+                <option value="10">10%</option>
+                <option value="20">20%</option>
+                <option value="30">30%</option>
+                <option value="40">40%</option>
+                <option value="50">50%</option>
+                <option value="60">60%</option>
+                <option value="70">70%</option>
+                <option value="80">80%</option>
             </select>
         </td>
         <td class="price"></td>
@@ -118,7 +118,7 @@ function createRows() {
 
         item.storeRow.querySelector(".discounts")
         .addEventListener("input", event => {
-            item.discount = parseFloat(event.target.value);
+            item.discount = parseInt(event.target.value);
             updateItem(item);
         });
 
